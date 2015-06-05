@@ -7,7 +7,7 @@ for (var i = 1; i <= num; i++) {
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
-  	element.appendChild(para).setAttribute("class", "pingpong");
+  	element.appendChild(para);
 
 
 	} else if (i % 3 === 0) {
@@ -16,7 +16,7 @@ for (var i = 1; i <= num; i++) {
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
-		element.appendChild(para).setAttribute("class", "ping");
+		element.appendChild(para);
 
 
 	} else if (i % 5 === 0) {
@@ -25,7 +25,7 @@ for (var i = 1; i <= num; i++) {
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
-		element.appendChild(para).setAttribute("class", "pong");
+		element.appendChild(para);
 
 
 
@@ -35,7 +35,7 @@ for (var i = 1; i <= num; i++) {
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
-		element.appendChild(para).setAttribute("class", "p");
+		element.appendChild(para);
 
 	}
 }
