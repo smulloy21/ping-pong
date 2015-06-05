@@ -15,73 +15,31 @@ div {
 
 div h1, div h2 {
 	padding: 1rem;
+	font-weight: 100;
 }
 
 div p {
 	opacity: 0;
 }
 
-div p:nth-child(3n+1) {
+div p:nth-child(3n+2) {
 	color: #0000D9;
 	font-size: 1.5rem;
-	text-align: left;
-	padding-left: 5rem;
+/*	text-align: left;*/
+/*	padding-right: 15rem;*/
+	position: relative;
 }
 
-div p:nth-child(5n+1) {
+div p:nth-child(5n+2) {
 	color: #A90000;
 	font-size: 1.5rem;
-	text-align: right;
-	padding-right: 5rem;
+/*	text-align: right;*/
+/*	padding-left: 15rem;*/
+	position: relative;
 }
 
-div p:nth-child(15n+1) {
+div p:nth-child(15n+2) {
 	color: #FEB74D;
 	font-size: 2rem;
 	text-align: center;
 }
-
-/* The animation code */
-@keyframes example {
-  from {color: #F2F2F2; left: 300px;}
-  to {color: #0000D9; left: 0px;}
-}
-
-@keyframes example2 {
-  from {color: #F2F2F2; right: 300px;}
-  to {color: #A90000; right: 0px;}
-}
-
-@keyframes example3 {
-  from {color: #F2F2F2;}
-  to {color: #FEB74D;}
-}
-
-/*/* The element to apply the animation to */
-/*div p:nth-child(3n+1) {
-  color: #F2F2F2;
-  position: relative;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-div p:nth-child(5n+1){
-  color: #F2F2F2;
-  position: relative;
-  animation-name: example2;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-div p:nth-child(15n+1){
-  color: #F2F2F2;
-  animation-name: example3;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-
-
-*/
-

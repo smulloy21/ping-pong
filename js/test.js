@@ -40,30 +40,19 @@ for (var i = 1; i <= num; i++) {
 	}
 }
 
-$(function() {
-	$('div p').each(function(i) {
-		$(this).delay((i++) * 200).fadeTo(150, 1); })
+
+$('div p').each(function(i) {
+	if (i % 3 === 0 && i % 5 === 0) {
+		$(this).delay((i++) * 350).fadeTo(150, 1);
+	} else if (i % 3 === 0) {
+		$(this).delay((i++) * 350).fadeTo(150, 1).animate({right: '20rem'}, 150);
+	} else if (i % 5 === 0) {
+		$(this).delay((i++) * 350).fadeTo(150, 1).animate({left: '20rem'}, 150);
+	} else {
+		$(this).delay((i++) * 350).fadeTo(150, 1);
+	}
 });
 
-// $(function() {
-// 	$('div p.ping').each(function(i) {
-// 		$(this).delay((i++) * 200).fadeTo(200, 1).animate({"margin-right": '+=200'}); })
-// });
-
-// // $(function() {
-// // 	$('div .ping').each(function(i) {
-// // 		$(this).delay((i++) * 200).fadeTo(1000, 1).animate({"margin-right": '+=200'}); })
-// // });
-
-// $(function() {
-// 	$('div .pong').each(function(i) {
-// 		$(this).delay((i++) * 200).fadeTo(200, 1).animate({"margin-left": '+=200'}); })
-// });
-
-// $(function() {
-// $('#fds img').each(function(i) {
-// $(this).delay((i++) * 500).fadeTo(1000, 1); })
-// });
 
 var para = document.createElement("h2");
 var node = document.createTextNode("Thanks for playing!");
