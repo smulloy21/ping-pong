@@ -12,7 +12,7 @@ for (var i = 1; i <= num; i++) {
 
 	} else if (i % 3 === 0) {
 		var para = document.createElement("p");
-		var node = document.createTextNode("Ping!");
+		var node = document.createTextNode("Ping");
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
@@ -21,7 +21,7 @@ for (var i = 1; i <= num; i++) {
 
 	} else if (i % 5 === 0) {
 		var para = document.createElement("p");
-		var node = document.createTextNode("Pong!");
+		var node = document.createTextNode("Pong");
 		para.appendChild(node);
 
 		var element = document.getElementById("div1");
