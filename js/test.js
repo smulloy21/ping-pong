@@ -45,9 +45,9 @@ $('div p').each(function(i) {
 	if (i % 3 === 0 && i % 5 === 0) {
 		$(this).delay((i++) * 450).fadeTo(200, 1);
 	} else if (i % 3 === 0) {
-		$(this).delay((i++) * 450).fadeTo(200, 1).animate({right: '20rem'}, 200);
+		$(this).delay((i++) * 450).fadeTo(200, 1).animate({right: '30%'}, 200);
 	} else if (i % 5 === 0) {
-		$(this).delay((i++) * 450).fadeTo(200, 1).animate({left: '20rem'}, 200);
+		$(this).delay((i++) * 450).fadeTo(200, 1).animate({left: '30%'}, 200);
 	} else {
 		$(this).delay((i++) * 450).fadeTo(200, 1);
 	}
