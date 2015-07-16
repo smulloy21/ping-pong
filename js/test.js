@@ -1,45 +1,33 @@
-var num = prompt("What number would you like me to ping-pong up to?");
+var puthis = function (where, what) {
+	var para = document.createElement(where);
+	var node = document.createTextNode(what);
+	para.appendChild(node);
 
-for (var i = 1; i <= num; i++) {
-	if (i % 3 === 0 && i % 5 === 0) {
-		var para = document.createElement("p");
-		var node = document.createTextNode("Ping-pong!");
-		para.appendChild(node);
+	var element = document.getElementById("div1");
+	element.appendChild(para);
+};
 
-		var element = document.getElementById("div1");
-  	element.appendChild(para);
+var pingPong = function(){
 
+	var num = prompt("What number would you like me to ping-pong up to?");
 
-	} else if (i % 3 === 0) {
-		var para = document.createElement("p");
-		var node = document.createTextNode("Ping");
-		para.appendChild(node);
+	if (parseInt(num) !== NaN ) {
 
-		var element = document.getElementById("div1");
-		element.appendChild(para);
-
-
-	} else if (i % 5 === 0) {
-		var para = document.createElement("p");
-		var node = document.createTextNode("Pong");
-		para.appendChild(node);
-
-		var element = document.getElementById("div1");
-		element.appendChild(para);
-
-
-
-	} else {
-		var para = document.createElement("p");
-		var node = document.createTextNode(i);
-		para.appendChild(node);
-
-		var element = document.getElementById("div1");
-		element.appendChild(para);
-
+		for (var i = 1; i <= num; i++) {
+			if (i % 3 === 0 && i % 5 === 0) {
+				puthis("p", "Ping-pong!");
+			} else if (i % 3 === 0) {
+				puthis("p", "Ping");
+			} else if (i % 5 === 0) {
+				puthis("p", "Pong");
+			} else {
+				puthis("p", i);
+			}
+		}
 	}
-}
+};
 
+pingPong();
 
 $('div p').each(function(i) {
 	if (i % 3 === 0 && i % 5 === 0) {
@@ -54,9 +42,4 @@ $('div p').each(function(i) {
 });
 
 
-var para = document.createElement("h2");
-var node = document.createTextNode("Thanks for playing!");
-para.appendChild(node);
-
-var element = document.getElementById("div1");
-element.appendChild(para);
+puthis("h2", "Thanks for playing!");
